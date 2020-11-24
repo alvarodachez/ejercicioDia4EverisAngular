@@ -1,0 +1,21 @@
+<div class="container text-center">
+    <h1>Resusts for your search</h1>
+        <hr>
+    <div class="row">
+        <div *ngFor="let item of lista" class="col-md">
+            <div class="box">
+                <p-card header={{item.Title}} subheader="Year: {{item.Year}}" [style]="{width: '360px'}" styleClass="p-card-shadow">
+                    <p-header>
+                        <img alt="Card" [src]="item.Poster">
+                    </p-header>
+                    <h4>{{item.Type | uppercase}}</h4>
+                    <ng-template pTemplate="footer">
+                        <p-button label="More Info" icon="pi pi-eye" [routerLink]= "['/search/item/',item.imdbID]"></p-button>
+                    </ng-template>
+                </p-card>
+            </div>
+        </div>
+    </div>
+</div>
+    
+

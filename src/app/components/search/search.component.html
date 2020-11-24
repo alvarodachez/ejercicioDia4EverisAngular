@@ -1,0 +1,10 @@
+<div class="container center block">
+    <h1>Search your movies or series</h1>
+    <hr>
+    <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input type="text" [(ngModel)]="titulo" pInputText placeholder="Search"/>
+    </span>
+    <p-button style="margin-left: 1.5vw;"label="Search" [routerLink]="['/search/',titulo]"></p-button>
+</div>
+
